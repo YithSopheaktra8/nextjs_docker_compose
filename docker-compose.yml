@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  nextjs:
+    # build the image from the Dockerfile in the current directory
+    build: .
+    # expose port 3000 on the container to port 3333 on the host
+    ports:
+      - "3005:3000"
+    # restart the container automatically if it crashes
+    restart: always
